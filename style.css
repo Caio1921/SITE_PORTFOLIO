@@ -368,3 +368,32 @@ body.dark-mode #toggleTheme {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+#btnMobile{
+    display: none;
+}
+
+@media ( max-width : 600px){
+     #btnMobile{
+        display: block;
+     }
+     #menu{
+       display: none;
+       position: absolute;
+       width: 100%;
+       top: 70px;
+       right: 0;
+       background: #00FFD5;
+       height: calc(100vh-70px);
+       z-index: 1000;
+     }
+}
+
+#cabecalho.active #menu{
+    display: block;
+}
+
+#menu a{
+    padding:  1rem 0;
+    margin: 0 1rem;
+    border-bottom: #333;
+}

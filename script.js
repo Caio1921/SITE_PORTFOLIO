@@ -17,3 +17,11 @@ document.addEventListener('mousemove', (e) => {
     cursorCircle.style.transform = `translate(${e.pageX - 7.5}px, ${e.pageY - 7.5}px)`;
 });
 
+const btnMobile = document.getElementById('btn-mobile');
+
+function toggleMenu(){
+    const nav = document.getElementById('cabecalho');
+    nav.classList.toogle('active');
+}
+
+btnMobile.addEventListener('click', toggleMenu);
