@@ -377,19 +377,24 @@ body.dark-mode #toggleTheme {
         display: block;
      }
      #menu{
-       display: none;
+       display: block;
        position: absolute;
        width: 100%;
        top: 70px;
        right: 0;
        background: #00FFD5;
-       height: calc(100vh-70px);
+       transition: .6s;
        z-index: 1000;
+       height: 0px;
+       visibility: hidden;
+       overflow-y: hidden;
      }
 }
 
-#cabecalho.active #menu{
-    display: block;
+#nav.active #menu{
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: auto;
 }
 
 #menu a{

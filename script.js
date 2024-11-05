@@ -20,7 +20,7 @@ document.addEventListener('mousemove', (e) => {
 const btnMobile = document.getElementById('btn-mobile');
 
 function toggleMenu(){
-    const nav = document.getElementById('cabecalho');
+    const nav = document.getElementById('nav');
     nav.classList.toogle('active');
 }
 
