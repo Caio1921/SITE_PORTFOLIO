@@ -376,7 +376,7 @@ body.dark-mode #toggleTheme {
      #btnMobile{
         display: block;
      }
-     #menu{
+     #cabecalho{
        display: block;
        position: absolute;
        width: 100%;
@@ -389,13 +389,13 @@ body.dark-mode #toggleTheme {
        visibility: hidden;
        overflow-y: hidden;
      }
-     #nav.active #menu{
+     #nav.active #cabecalho{
         height: calc(100vh - 70px);
         visibility: visible;
         overflow-y: auto;
     }
     
-    #menu a{
+    #cabecalho a{
         padding:  1rem 0;
         margin: 0 1rem;
         border-bottom: #333;
