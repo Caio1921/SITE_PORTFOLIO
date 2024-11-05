@@ -372,10 +372,8 @@ body.dark-mode #toggleTheme {
     display: none;
 }
 
-@media ( max-width : 900px){
-     #btnMobile{
-        display: block;
-     }
+@media ( max-width : 600px){
+  
      #menu{
        display: block;
        position: absolute;
@@ -389,16 +387,51 @@ body.dark-mode #toggleTheme {
        visibility: hidden;
        overflow-y: hidden;
      }
+     #nav.active #menu{
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    
+    #menu a{
+        padding:  1rem 0;
+        margin: 0 1rem;
+        border-bottom: #333;
+    }
+    #btnMobile{
+        display: flex ;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        background:none;
+        border: none;
+        cursor: pointer;
+        gap: .5rem;
+    }
+    #hambuguer{
+        display: block;
+        border-top: 2px solid;
+        width: 20px;
+        color: #00FFD5;
+    }
+    #hambuguer::after , #hambuguer::before{
+        content: "";
+        width: 20px;
+        height: 2px;
+        margin-top: 5px;
+        background: currentColor;
+        transition: .3s;
+        position: relative;
+    }
+    #nav.active #hambuguer{
+        border-top-color: transparent;
+
+    }
+    #nav.active #hambuguer ::before{
+        transform: rotate(135deg);
+    }
+    #nav.active #hambuguer::after{
+        transform: rotate(-135deg);
+        top: -7px;
+    }
 }
 
-#nav.active #menu{
-    height: calc(100vh - 70px);
-    visibility: visible;
-    overflow-y: auto;
-}
-
-#menu a{
-    padding:  1rem 0;
-    margin: 0 1rem;
-    border-bottom: #333;
-}
